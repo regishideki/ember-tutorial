@@ -26,7 +26,7 @@ export default function() {
       }, {
         type: 'rentals',
         id: 3,
-        attibutes: {
+        attributes: {
           title: 'Downtown Charm',
           owner: 'Violet Beauregarde',
           city: 'Portland',

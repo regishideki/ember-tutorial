@@ -1,0 +1,19 @@
+<article class='listing'>
+  <a {{action 'toogleImageSize'}} class='image {{if isWide 'wide'}}'>
+    <img src='{{rental.image}}' class='image' alt=''>
+    <small>View Larger</small>
+  </a>
+  <h3>{{rental.title}}</h3>
+  <div class='details owner'>
+    <span>Owner:</span> {{rental.owner}}
+  </div>
+  <div class='details type'>
+    <span>Type:</span> {{rental.type}}
+  </div>
+  <div class='details location'>
+    <span>Location:</span> {{rental.location}}
+  </div>
+  <div class='details bedrooms'>
+    <span>Bedrooms:</span> {{rental.bedrooms}}
+  </div>
+</article>

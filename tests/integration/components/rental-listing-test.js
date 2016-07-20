@@ -17,10 +17,10 @@ test('should initialize small', function(assert) {
   });
   this.set('rentalObj', stubRental);
   this.render(hbs`{{rental-listing rental=rentalObj}}`);
-  assert.equal(this.$('.image.wide').length, 0, 'initially rendered small');
+  assert.equal(this.$('.toggle.wide').length, 0, 'initially rendered small');
 });
 
-test('should toggle wide class on click', function(assert) {
+test('should .toggle wide class on click', function(assert) {
   let stubRental = Ember.Object.create({
     image: 'fake.png',
     title: 'test-title',
@@ -31,8 +31,8 @@ test('should toggle wide class on click', function(assert) {
   });
   this.set('rentalObj', stubRental);
   this.render(hbs`{{rental-listing rental=rentalObj}}`);
-  this.$('.image').click();
-  assert.equal(this.$('.image.wide').length, 1, 'rendered wide after click');
+  this.$('.toggle').click();
+  assert.equal(this.$('.toggle.wide').length, 1, 'rendered wide after click');
 });
 
 test('should return wider on a new click', function(assert) {
@@ -46,7 +46,7 @@ test('should return wider on a new click', function(assert) {
   });
   this.set('rentalObj', stubRental);
   this.render(hbs`{{rental-listing rental=rentalObj}}`);
-  this.$('.image').click();
-  this.$('.image').click();
-  assert.equal(this.$('.image.wide').length, 0, 'rendered small after second click');
+  this.$('.toggle').click();
+  this.$('.toggle').click();
+  assert.equal(this.$('.toggle.wide').length, 0, 'rendered small after second click');
 });

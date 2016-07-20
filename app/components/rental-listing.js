@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   isWide: false,
   actions: {
-    toogleImageSize() {
+    toggleImageSize() {
       this.toggleProperty('isWide');
     }
   }  

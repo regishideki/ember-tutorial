@@ -1,5 +1,5 @@
 <article class='listing'>
-  <a {{action 'toggleImageSize'}} class='toggle {{if isWide 'wide'}}'>
+  <a {{action 'toggleImageSize'}} class='image toggle {{if isWide 'wide'}}'>
     <img src='{{rental.image}}' class='image' alt=''>
     <small>View Larger</small>
   </a>
@@ -8,10 +8,10 @@
     <span>Owner:</span> {{rental.owner}}
   </div>
   <div class='details type'>
-    <span>Type:</span> {{rental.type}}
+    <span>Type:</span> {{rental-property-type rental.type}} - {{rental.type}}
   </div>
   <div class='details location'>
-    <span>Location:</span> {{rental.location}}
+    <span>Location:</span> {{rental.city}}
   </div>
   <div class='details bedrooms'>
     <span>Bedrooms:</span> {{rental.bedrooms}}
